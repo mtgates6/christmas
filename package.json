@@ -1,0 +1,15 @@
+{
+  "name": "cousins-christmas-stock-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Private Christmas stock tracker for cousins and grandparents.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

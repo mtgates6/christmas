@@ -1,0 +1,49 @@
+{
+  "tickers": {
+    "HUMN": "Roundhill Humanoid Robotics ETF",
+    "UFO": "Procure Space ETF",
+    "IHF": "iShares U.S. Healthcare Providers ETF"
+  },
+  "cousins": [
+    {
+      "id": "matthew",
+      "name": "Matthew",
+      "token": "M",
+      "holdings": [
+        { "ticker": "HUMN", "shares": 2, "buyPrice": 27.29, "currentPrice": 31.50 },
+        { "ticker": "UFO", "shares": 2, "buyPrice": 39.95, "currentPrice": 38.10 },
+        { "ticker": "IHF", "shares": 2, "buyPrice": 60.96, "currentPrice": 62.30 }
+      ]
+    },
+    {
+      "id": "scottie",
+      "name": "Scottie",
+      "token": "S",
+      "holdings": [
+        { "ticker": "HUMN", "shares": 2, "buyPrice": 27.29, "currentPrice": 31.50 },
+        { "ticker": "UFO", "shares": 2, "buyPrice": 39.95, "currentPrice": 38.10 },
+        { "ticker": "IHF", "shares": 2, "buyPrice": 60.96, "currentPrice": 62.30 }
+      ]
+    },
+    {
+      "id": "patrick",
+      "name": "Patrick",
+      "token": "P",
+      "holdings": [
+        { "ticker": "HUMN", "shares": 2, "buyPrice": 27.29, "currentPrice": 31.50 },
+        { "ticker": "UFO", "shares": 2, "buyPrice": 39.95, "currentPrice": 38.10 },
+        { "ticker": "IHF", "shares": 2, "buyPrice": 60.96, "currentPrice": 62.30 }
+      ]
+    },
+    {
+      "id": "hannah",
+      "name": "Hannah",
+      "token": "H",
+      "holdings": [
+        { "ticker": "HUMN", "shares": 2, "buyPrice": 27.29, "currentPrice": 31.50 },
+        { "ticker": "UFO", "shares": 2, "buyPrice": 39.95, "currentPrice": 38.10 },
+        { "ticker": "IHF", "shares": 2, "buyPrice": 60.96, "currentPrice": 62.30 }
+      ]
+    }
+  ]
+}
