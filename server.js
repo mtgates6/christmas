@@ -12,8 +12,9 @@ const {
 const app = express();
 const port = process.env.PORT || 3000;
 const config = {
-  familyToken: 'F',
-  showFamilyViewLink: false,
+  familyToken: 'family',
+  showFamilyViewLink: true,
+  publicMode: true,
 };
 
 const data = loadHoldingsData();
@@ -276,8 +277,19 @@ app.get('/c/:token', (req, res) => {
   res.send(renderCousinPage(cousin));
 });
 
+app.get('/family', (_req, res) => {
+  setNoCache(res);
+  res.send(renderFamilyPage());
+});
+
 app.get('/family/:token', (req, res) => {
   setNoCache(res);
+
+  if (config.publicMode) {
+    res.send(renderFamilyPage());
+    return;
+  }
+
   if (req.params.token.toUpperCase() !== config.familyToken.toUpperCase()) {
     res.status(404).send(
       renderLayout(

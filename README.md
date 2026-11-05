@@ -1,9 +1,9 @@
 # Cousins' Christmas Stock Tracker
 
-A small private holiday stock tracker with two kinds of views:
+A small public holiday stock tracker with two kinds of views:
 
-- Personal gift pages for each cousin at `/c/<token>`
-- A grandparent family summary at `/family/<token>`
+- Personal gift pages for each cousin at `/c/<name-or-token>`
+- A family summary at `/family`
 
 The data file `holdings.json` is the single source of truth.
 
@@ -17,8 +17,10 @@ npm start
 Then open:
 
 - http://localhost:3000/
+- http://localhost:3000/c/matthew
 - http://localhost:3000/c/MATT01
-- http://localhost:3000/family/FAMILY1
+- http://localhost:3000/family
+- http://localhost:3000/family/family
 
 ## Config
 
@@ -26,9 +28,10 @@ The app exposes a small config object in `server.js`:
 
 ```js
 const config = {
-  familyToken: 'FAMILY1',
-  showFamilyViewLink: false,
+  familyToken: 'family',
+  showFamilyViewLink: true,
+  publicMode: true,
 };
 ```
 
-Set `showFamilyViewLink` to `true` if you want the family summary link to appear on cousin pages.
+Set `publicMode` to `false` if you want the old private-link gate back.

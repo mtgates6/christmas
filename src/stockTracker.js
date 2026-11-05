@@ -12,7 +12,13 @@ function toNormalizedToken(value) {
 
 function findCousinByToken(data, token) {
   const normalizedToken = toNormalizedToken(token);
-  return (data.cousins || []).find((cousin) => toNormalizedToken(cousin.token) === normalizedToken) || null;
+
+  return (data.cousins || []).find((cousin) => {
+    const matchesToken = toNormalizedToken(cousin.token) === normalizedToken;
+    const matchesId = toNormalizedToken(cousin.id) === normalizedToken;
+    const matchesName = toNormalizedToken(cousin.name) === normalizedToken;
+    return matchesToken || matchesId || matchesName;
+  }) || null;
 }
 
 function calculatePortfolioTotals(cousin) {

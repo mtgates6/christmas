@@ -43,6 +43,14 @@ test('findCousinByToken resolves a valid cousin from a shared private link', () 
   assert.equal(cousin.name, 'Scottie');
 });
 
+test('findCousinByToken resolves a public name or id lookup', () => {
+  const cousinByName = findCousinByToken(sampleData, 'matthew');
+  const cousinById = findCousinByToken(sampleData, 'SCOT01');
+
+  assert.equal(cousinByName.name, 'Matthew');
+  assert.equal(cousinById.name, 'Scottie');
+});
+
 test('calculatePortfolioTotals sums market value and gain/loss for a cousin', () => {
   const summary = calculatePortfolioTotals(sampleData.cousins[0]);
 
